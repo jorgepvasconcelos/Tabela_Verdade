@@ -21,10 +21,15 @@ Para usar a negação use o '~'(til) antes da proposição, EX:  '~a'
 
 exemplos de modelo:
 tabela_verdade = ['a', '^', 'b']
+
 tabela_verdade = ['a', '^', 'b', '>', '~a]
+
 tabela_verdade = ['a', '>', 'b', 'v', 'c']
+
 tabela_verdade = ['a', 'v', 'b', '^', 'c']
+
 tabela_verdade = ['a', '^', 'b', '<>', 'c']
+
 tabela_verdade = ['a', '^', 'b', '>', 'c', 'v', '~a']
 
 O código ainda precisa ser modularizado
