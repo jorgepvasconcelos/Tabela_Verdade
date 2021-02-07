@@ -12,6 +12,7 @@ Proposições: a, b, c, d. todas em minúsculo.
 
 Use as proposições em ordem! 
 
+
 Use os operadores lógicos: 
 
 Disjunção: ‘v’ – minúsculo
@@ -22,7 +23,9 @@ Condicional:  ‘>’
 
 Bicondicional: ‘<>’ 
 
+
 Para usar a negação use o '~'(til) antes da proposição, EX:  '~a'
+
 
 exemplos de modelo:
 
