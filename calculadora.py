@@ -1,3 +1,6 @@
+from variaveis_ambiente import *
+
+
 def tamanho4():
     a.append('V')
     a.append('V')
@@ -106,29 +109,6 @@ def tamanho16():
     d.append('F')
     d.append('V')
     d.append('F')
-
-
-# LISTAS
-
-# Proposições
-a = []
-b = []
-c = []
-d = []
-
-# colunas
-cl1 = []
-cl2 = []
-
-# auxiliares
-aux = []
-auxnegacao = []
-aux1 = []
-aux2 = []
-
-matriz = []
-resultado = []
-r = []
 
 
 # teste dos valores a serem calculados
