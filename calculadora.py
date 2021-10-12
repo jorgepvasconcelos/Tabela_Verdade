@@ -2,113 +2,24 @@ from variaveis_ambiente import *
 
 
 def tamanho4():
-    a.append('V')
-    a.append('V')
-    a.append('F')
-    a.append('F')
-    b.append('V')
-    b.append('F')
-    b.append('V')
-    b.append('F')
+    global a, b
+    a = ['V', 'V', 'F', 'F']
+    b = ['V', 'F', 'V', 'F']
 
 
 def tamanho8():
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-
-    b.append('V')
-    b.append('V')
-    b.append('F')
-    b.append('F')
-    b.append('V')
-    b.append('V')
-    b.append('F')
-    b.append('F')
-
-    c.append('V')
-    c.append('F')
-    c.append('V')
-    c.append('F')
-    c.append('V')
-    c.append('F')
-    c.append('V')
-    c.append('F')
+    global a, b, c
+    a = ['V', 'V', 'V', 'V', 'F', 'F', 'F', 'F']
+    b = ['V', 'V', 'F', 'F', 'V', 'V', 'F', 'F']
+    c = ['V', 'F', 'V', 'F', 'V', 'F', 'V', 'F']
 
 
 def tamanho16():
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('V')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-    a.append('F')
-
-    b.append('V')
-    b.append('V')
-    b.append('V')
-    b.append('V')
-    b.append('F')
-    b.append('F')
-    b.append('F')
-    b.append('F')
-    b.append('V')
-    b.append('V')
-    b.append('V')
-    b.append('V')
-    b.append('F')
-    b.append('F')
-    b.append('F')
-    b.append('F')
-
-    c.append('V')
-    c.append('V')
-    c.append('F')
-    c.append('F')
-    c.append('V')
-    c.append('V')
-    c.append('F')
-    c.append('F')
-    c.append('V')
-    c.append('V')
-    c.append('F')
-    c.append('F')
-    c.append('V')
-    c.append('V')
-    c.append('F')
-    c.append('F')
-
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
-    d.append('V')
-    d.append('F')
+    global a, b, c, d
+    a = ['V', 'V', 'V', 'V', 'V', 'V', 'V', 'V', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F']
+    b = ['V', 'V', 'V', 'V', 'F', 'F', 'F', 'F', 'V', 'V', 'V', 'V', 'F', 'F', 'F', 'F']
+    c = ['V', 'V', 'F', 'F', 'V', 'V', 'F', 'F', 'V', 'V', 'F', 'F', 'V', 'V', 'F', 'F']
+    d = ['V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F']
 
 
 # teste dos valores a serem calculados
@@ -414,7 +325,7 @@ def calculadora(tabela_verdade, matriz=[]):
 
 if __name__ == '__main__':
     # Tabela verdade
-    tabela_verdade = ['a', '>', 'b', '>', 'c']
+    tabela_verdade = ['a', '^', 'b']
 
     # gambiarra
     # Verifica a quantidade de proposições na tabela verdade
