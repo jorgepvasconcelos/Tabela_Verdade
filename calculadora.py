@@ -41,7 +41,7 @@ def arruma_matriz(lista):
 
 
 # calculos
-def disjuncao(cl1, cl2):
+def disjuncao(cl1, cl2, linhas):
     print('entrou na disjunção')
     test(cl1, cl2)
     aux.clear()
@@ -56,7 +56,7 @@ def disjuncao(cl1, cl2):
     return r
 
 
-def conjuncao(cl1, cl2):
+def conjuncao(cl1, cl2, linhas):
     print('entrou na conjunção')
     test(cl1, cl2)
     aux.clear()
@@ -71,7 +71,7 @@ def conjuncao(cl1, cl2):
     return r
 
 
-def condicional(cl1, cl2):
+def condicional(cl1, cl2, linhas):
     print('entrou no condicional')
     test(cl1, cl2)
     aux.clear()
@@ -86,7 +86,7 @@ def condicional(cl1, cl2):
     return r
 
 
-def bicondicional(cl1, cl2):
+def bicondicional(cl1, cl2, linhas):
     print('entrou no bicondicional')
     test(cl1, cl2)
     aux.clear()
@@ -101,7 +101,7 @@ def bicondicional(cl1, cl2):
     return r
 
 
-def negacao(cl1):
+def negacao(cl1, linhas):
     print('entrou na negação')
     print(cl1)
     print(f'valor de r: {r}')
@@ -163,7 +163,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux1 = a[:]
             if tabela_verdade[0] == '~a':
                 aux = a[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux1 = auxnegacao[:]
                 auxnegacao.clear()
@@ -175,7 +175,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux1 = b[:]
             if tabela_verdade[0] == '~b':
                 aux = b[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux1 = auxnegacao[:]
                 auxnegacao.clear()
@@ -187,7 +187,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux1 = c[:]
             if tabela_verdade[0] == '~c':
                 aux = c[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux1 = auxnegacao[:]
                 auxnegacao.clear()
@@ -199,7 +199,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux1 = d[:]
             if tabela_verdade[0] == '~d':
                 aux = d[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux1 = auxnegacao[:]
                 auxnegacao.clear()
@@ -228,7 +228,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux2 = a[:]
             if tabela_verdade[2] == '~a':
                 aux = a[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux2 = auxnegacao[:]
                 auxnegacao.clear()
@@ -240,7 +240,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux2 = b[:]
             if tabela_verdade[2] == '~b':
                 aux = b[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux2 = auxnegacao[:]
                 auxnegacao.clear()
@@ -252,7 +252,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux2 = c[:]
             if tabela_verdade[2] == '~c':
                 aux = c[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux2 = auxnegacao[:]
                 auxnegacao.clear()
@@ -264,7 +264,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 aux2 = d[:]
             if tabela_verdade[2] == '~d':
                 aux = d[:]
-                auxnegacao = negacao(aux)
+                auxnegacao = negacao(aux, linhas)
                 aux.clear()
                 aux2 = auxnegacao[:]
                 auxnegacao.clear()
@@ -277,7 +277,7 @@ def calculadora(tabela_verdade, matriz=[]):
             # disjunção
             try:
                 if tabela_verdade[1] == 'v':
-                    aux = disjuncao(aux1, aux2)
+                    aux = disjuncao(aux1, aux2, linhas)
                     resultado = aux[:]
                     aux.clear
                     apague()
@@ -288,7 +288,7 @@ def calculadora(tabela_verdade, matriz=[]):
             # conjunção
             try:
                 if tabela_verdade[1] == '^':
-                    aux = conjuncao(aux1, aux2)
+                    aux = conjuncao(aux1, aux2, linhas)
                     resultado = aux[:]
                     aux.clear
                     apague()
@@ -299,7 +299,7 @@ def calculadora(tabela_verdade, matriz=[]):
             # condicional
             try:
                 if tabela_verdade[1] == '>':
-                    aux = condicional(aux1, aux2)
+                    aux = condicional(aux1, aux2, linhas)
                     resultado = aux[:]
                     aux.clear
                     apague()
@@ -310,7 +310,7 @@ def calculadora(tabela_verdade, matriz=[]):
             # bicondicional
             try:
                 if tabela_verdade[1] == '<>':
-                    aux = bicondicional(aux1, aux2)
+                    aux = bicondicional(aux1, aux2, linhas)
                     resultado = aux[:]
                     aux.clear
                     apague()
