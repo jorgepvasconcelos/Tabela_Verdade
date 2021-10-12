@@ -327,37 +327,20 @@ if __name__ == '__main__':
     # Tabela verdade
     tabela_verdade = ['a', '^', 'b']
 
-    # gambiarra
     # Verifica a quantidade de proposições na tabela verdade
     expoente = 0
     # ----------- A ------------
-    q = tabela_verdade.count('a') + tabela_verdade.count('~a')
-    t = q
-    if t > 0:
-        expoente = expoente + 1
-        q = 0
-        t = 0
+    if 'a' in tabela_verdade or '~a' in tabela_verdade:
+        expoente += 1
     # ----------- B ------------
-    q = tabela_verdade.count('b') + tabela_verdade.count('~b')
-    t = q
-    if t > 0:
-        expoente = expoente + 1
-        q = 0
-        t = 0
+    if 'b' in tabela_verdade or '~b' in tabela_verdade:
+        expoente += 1
     # ----------- C ------------
-    q = tabela_verdade.count('c') + tabela_verdade.count('~c')
-    t = q
-    if t > 0:
-        expoente = expoente + 1
-        q = 0
-        t = 0
+    if 'c' in tabela_verdade or '~c' in tabela_verdade:
+        expoente += 1
     # ----------- D ------------
-    q = tabela_verdade.count('d') + tabela_verdade.count('~d')
-    t = q
-    if t > 0:
-        expoente = expoente + 1
-        q = 0
-        t = 0
+    if 'd' in tabela_verdade or '~d' in tabela_verdade:
+        expoente += 1
     # Quantidade de linhas é igual a: 2 potencializado a quantidade de proposições
     linhas = 2 ** expoente
     print(expoente)
