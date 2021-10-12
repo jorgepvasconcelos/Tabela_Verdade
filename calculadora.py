@@ -44,7 +44,6 @@ def arruma_matriz(lista):
 def disjuncao(cl1, cl2, linhas):
     print('entrou na disjunção')
     test(cl1, cl2)
-    aux.clear()
     for c in range(0, linhas):
         if cl1[c] == 'F' and cl2[c] == 'F':
             r.append('F')
@@ -59,7 +58,6 @@ def disjuncao(cl1, cl2, linhas):
 def conjuncao(cl1, cl2, linhas):
     print('entrou na conjunção')
     test(cl1, cl2)
-    aux.clear()
     for c in range(linhas):
         if cl1[c] == 'V' and cl2[c] == 'V':
             r.append('V')
@@ -74,7 +72,6 @@ def conjuncao(cl1, cl2, linhas):
 def condicional(cl1, cl2, linhas):
     print('entrou no condicional')
     test(cl1, cl2)
-    aux.clear()
     for c in range(linhas):
         if cl1[c] == 'V' and cl2[c] == 'F':
             r.append('F')
@@ -89,7 +86,6 @@ def condicional(cl1, cl2, linhas):
 def bicondicional(cl1, cl2, linhas):
     print('entrou no bicondicional')
     test(cl1, cl2)
-    aux.clear()
     for c in range(linhas):
         if cl1[c] == 'V' and cl2[c] == 'F' or cl1[c] == 'F' and cl2[c] == 'V':
             r.append('F')
@@ -279,7 +275,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 if tabela_verdade[1] == 'v':
                     aux = disjuncao(aux1, aux2, linhas)
                     resultado = aux[:]
-                    aux.clear
+                    aux.clear()
                     apague()
                     break
             except:
@@ -290,7 +286,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 if tabela_verdade[1] == '^':
                     aux = conjuncao(aux1, aux2, linhas)
                     resultado = aux[:]
-                    aux.clear
+                    aux.clear()
                     apague()
                     break
             except:
@@ -301,7 +297,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 if tabela_verdade[1] == '>':
                     aux = condicional(aux1, aux2, linhas)
                     resultado = aux[:]
-                    aux.clear
+                    aux.clear()
                     apague()
                     break
             except:
@@ -312,7 +308,7 @@ def calculadora(tabela_verdade, matriz=[]):
                 if tabela_verdade[1] == '<>':
                     aux = bicondicional(aux1, aux2, linhas)
                     resultado = aux[:]
-                    aux.clear
+                    aux.clear()
                     apague()
                     break
             except:
