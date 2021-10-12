@@ -1,4 +1,5 @@
-import CALCULADORA_TABELA_VERDADE as ct
+import calculadora
+
 
 def adiciona_matriz():
     r = []
@@ -19,14 +20,13 @@ def adiciona_matriz():
     return r
 
 
-#lista_principal = ['(', '(', 'a', '>', 'b', ')', '^', '(', 'a', 'v', 'c', ')', ')']
-lista_principal = ['(', 'a', '>', 'b', '(', 'a', 'v', 'c', ')', ')']
+lista_principal = ['(', '(', 'a', '>', 'b', ')', '^', '(', 'a', 'v', 'c', ')', ')']
+# lista_principal = ['(', 'a', '>', 'b', '(', 'a', 'v', 'c', ')', ')']
 # lista_principal = ['a', '>', 'b', '(', 'a', ')'] # esta com problema
 # lista_principal = ['a', '>', 'b', '^', '(', 'a', 'v', 'c', ')', '>', '(', 'a', '^' 'b', ')']
 # lista_principal = ['a', '>', 'b', 'v', '(', 'a', '>', 'c', ')']
 l2 = lista_principal[:]
 l3 = []
-matriz = []
 lista_entre_parenteses = []
 l3 = l2[:]
 
@@ -122,9 +122,6 @@ while True:
             print(f'L2 na retirada de parenteses:\n{l2}')
             print(f'L3 na retirada de parenteses:\n{l3}')
             lista_entre_parenteses.clear()
-
-            m = ct.calculadora(laux, matriz)
-            matriz.append(m)
 
             # fazendo a variavel laux receber os valores que estão entre parenteses
             for c in range(0, len(l3)):
