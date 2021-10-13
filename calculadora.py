@@ -1,5 +1,5 @@
 from variaveis_ambiente import *
-
+from calculos import *
 
 def tamanho4():
     global a, b
@@ -22,12 +22,6 @@ def tamanho16():
     d = ['V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F', 'V', 'F']
 
 
-# teste dos valores a serem calculados
-def test(cl1, cl2):
-    print(f'cl1 {cl1}')
-    print(f'cl2 {cl2}')
-
-
 def arruma_matriz(lista):
     lista = str(lista)
     lista = lista.replace('[', '')
@@ -40,68 +34,11 @@ def arruma_matriz(lista):
     return r
 
 
-# calculos
-def disjuncao(cl1, cl2, linhas):
-    print('entrou na disjunção')
-    test(cl1, cl2)
-    for c in range(0, linhas):
-        if cl1[c] == 'F' and cl2[c] == 'F':
-            r.append('F')
-        else:
-            r.append('V')
-    cl1.clear()
-    cl2.clear()
-    print(f'valor de r: {r}')
-    return r
-
-
-def conjuncao(cl1, cl2, linhas):
-    print('entrou na conjunção')
-    test(cl1, cl2)
-    for c in range(linhas):
-        if cl1[c] == 'V' and cl2[c] == 'V':
-            r.append('V')
-        else:
-            r.append('F')
-    cl1.clear()
-    cl2.clear()
-    print(f'valor de r: {r}')
-    return r
-
-
-def condicional(cl1, cl2, linhas):
-    print('entrou no condicional')
-    test(cl1, cl2)
-    for c in range(linhas):
-        if cl1[c] == 'V' and cl2[c] == 'F':
-            r.append('F')
-        else:
-            r.append('V')
-    cl1.clear()
-    cl2.clear()
-    print(f'valor de r: {r}')
-    return r
-
-
-def bicondicional(cl1, cl2, linhas):
-    print('entrou no bicondicional')
-    test(cl1, cl2)
-    for c in range(linhas):
-        if cl1[c] == 'V' and cl2[c] == 'F' or cl1[c] == 'F' and cl2[c] == 'V':
-            r.append('F')
-        else:
-            r.append('V')
-    cl1.clear()
-    cl2.clear()
-    print(f'valor de r: {r}')
-    return r
-
-
 def negacao(cl1, linhas):
     print('entrou na negação')
+    r = []
     print(cl1)
     print(f'valor de r: {r}')
-    r.clear()
     for c in range(linhas):
         if cl1[c] == 'V':
             r.append('F')
